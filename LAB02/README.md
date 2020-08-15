@@ -4,7 +4,6 @@ Apache Maven es una herramienta que estandariza la configuración de un proyecto
 
 Ingresar a la página de la herramienta y entender:
 
-<br></br>
 **1. Cuál es su mayor utilidad**
 
 - La característica más importante de Maven es su capacidad de trabajar en red.
