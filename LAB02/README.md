@@ -52,6 +52,6 @@ Ingresar a la página de la herramienta y entender:
 
 ![](http://webipedia.es/wp-content/uploads/2018/08/11_Facilidad-1024x578.jpg) 
 
-## Fuentes
+## REFERENCIAS
 
 [Fases]: <https://www.it-swarm.dev/es/maven/cuales-son-los-objetivos-y-fases-de-maven-y-cual-es-su-diferencia/1071905498/>
