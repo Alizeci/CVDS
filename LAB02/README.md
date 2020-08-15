@@ -13,14 +13,14 @@ Ingresar a la página de la herramienta y entender:
 	Cada ciclo de vida de compilación se compone de fases
 	
 	Por ejemplo, el ciclo de vida default comprende los siguientes Build Phases:
-	- validate - validate the project is correct and all necessary information is available
-	- compile - compile the source code of the project
-	- test - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
-	- package - take the compiled code and package it in its distributable format, such as a JAR.
-	- integration-test - process and deploy the package if necessary into an environment where integration tests can be run
-	- verify - run any checks to verify the package is valid and meets quality criteria
-	- install - install the package into the local repository, for use as a dependency in other projects locally
-	- deploy - done in an integration or release environment, copies the final package to the remote repository for sharing with other developers and projects.
+	- **validate** - validate the project is correct and all necessary information is available
+	- **compile** - compile the source code of the project
+	- **test** - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+	- **package** - take the compiled code and package it in its distributable format, such as a JAR.
+	- **integration-test** - process and deploy the package if necessary into an environment where integration tests can be run
+	- **verify** - run any checks to verify the package is valid and meets quality criteria
+	- **install** - install the package into the local repository, for use as a dependency in other projects locally
+	- **deploy** - done in an integration or release environment, copies the final package to the remote repository for sharing with other developers and projects.
 
 	Para pasar por las fases anteriores, solo tenemos que llamar a un comando:
 	```sh
@@ -54,4 +54,4 @@ Ingresar a la página de la herramienta y entender:
 
 ## REFERENCIAS
 
-[Fases]: <https://www.it-swarm.dev/es/maven/cuales-son-los-objetivos-y-fases-de-maven-y-cual-es-su-diferencia/1071905498/>
+- https://www.it-swarm.dev/es/maven/cuales-son-los-objetivos-y-fases-de-maven-y-cual-es-su-diferencia/1071905498/
