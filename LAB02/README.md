@@ -4,15 +4,16 @@ Apache Maven es una herramienta que estandariza la configuración de un proyecto
 
 Ingresar a la página de la herramienta y entender:
 
-1. Cuál es su mayor utilidad
+**1. Cuál es su mayor utilidad**
 
-	- la característica más importante de Maven es su capacidad de trabajar en red.
+	- La característica más importante de Maven es su capacidad de trabajar en red.
 
-2. Fases de maven
+**2. Fases de maven**
 
 	Cada ciclo de vida de compilación se compone de fases
 	
 	Por ejemplo, el ciclo de vida default comprende los siguientes Build Phases:
+
 	- **validate** - validate the project is correct and all necessary information is available
 	- **compile** - compile the source code of the project
 	- **test** - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
@@ -35,20 +36,28 @@ Ingresar a la página de la herramienta y entender:
 
 	Sin embargo, si desea personalizar el prefijo utilizado para hacer referencia a su complemento, puede especificar el prefijo directamente a través de un parámetro de configuración en el maven-plugin-plugin en el POM de su plugin.
 
-3. Ciclo de vida de la construcción
+**3. Ciclo de vida de la construcción**
 
-	- compile: Genera los ficheros .class compilando los fuentes .java
-	- test: Ejecuta los test automáticos de JUnit existentes, abortando el proceso si alguno de ellos falla.
-	- install: Copia el fichero .jar a un directorio de nuestro ordenador donde maven deja todos los .jar. De esta forma esos .jar pueden utilizarse en otros proyectos maven en el mismo ordenador.
-	- deploy: Copia el fichero .jar a un servidor remoto, poniéndolo disponible para cualquier proyecto maven con acceso a ese servidor remoto.
+	- **compile:** Genera los ficheros .class compilando los fuentes .java
+	- **test:** Ejecuta los test automáticos de JUnit existentes, abortando el proceso si alguno de ellos falla.
+	- **install:** Copia el fichero .jar a un directorio de nuestro ordenador donde maven deja todos los .jar. De esta forma esos .jar pueden utilizarse en otros proyectos maven en el mismo ordenador.
+	- **deploy:** Copia el fichero .jar a un servidor remoto, poniéndolo disponible para cualquier proyecto maven con acceso a ese servidor remoto.
+
+	Hay tres principales incorporadas Build Life Cycles:
+
+	- **default**
+	- **limpiar**
+	- **sitio**
 	
-4. Para qué sirven los plugins
+	![](https://i.stack.imgur.com/Ub3Bd.png)
+	
+**4. Para qué sirven los plugins**
 
 	- Un plugin es aquella aplicación que en un programa añade una funcionalidad adicional o una nueva característica al software.
 
-5. Qué es y para qué sirve el repositorio central de maven
+**5. Qué es y para qué sirve el repositorio central de maven**
 
-	- repositorio Maven es básicamente un lugar donde están los artefactos maven, estructurados en cierta forma estándar para hacer las descargas de las dependencias.
+	- El repositorio Maven es básicamente un lugar donde están los artefactos maven, estructurados en cierta forma estándar para hacer las descargas de las dependencias.
 
 ![](http://webipedia.es/wp-content/uploads/2018/08/11_Facilidad-1024x578.jpg) 
 
