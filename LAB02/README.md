@@ -4,7 +4,7 @@ Apache Maven es una herramienta que estandariza la configuración de un proyecto
 
 Ingresar a la página de la herramienta y entender:
 
-
+<br></br>
 **1. Cuál es su mayor utilidad**
 
 - La característica más importante de Maven es su capacidad de trabajar en red.
@@ -57,12 +57,12 @@ Hay tres principales incorporadas Build Life Cycles:
 <img height="300" src="https://i.stack.imgur.com/Ub3Bd.png" />
 <br>
 </p>
-<br></br>
+
 **4. Para qué sirven los plugins**
 
 Un plugin es aquella aplicación que en un programa añade una funcionalidad adicional o una nueva característica al software.
-<br></br>
 
+<br></br>
 **5. Qué es y para qué sirve el repositorio central de maven**
 
  El repositorio Maven es básicamente un lugar donde están los artefactos maven, estructurados en cierta forma estándar para hacer las descargas de las dependencias.
