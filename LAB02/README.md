@@ -6,7 +6,7 @@ Ingresar a la página de la herramienta y entender:
 
 1. Cuál es su mayor utilidad
 
-	-
+	- la característica más importante de Maven es su capacidad de trabajar en red.
 
 2. Fases de maven
 
