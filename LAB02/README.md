@@ -54,4 +54,7 @@ Ingresar a la página de la herramienta y entender:
 
 ## REFERENCIAS
 
-- https://www.it-swarm.dev/es/maven/cuales-son-los-objetivos-y-fases-de-maven-y-cual-es-su-diferencia/1071905498/
+- <https://www.it-swarm.dev/es/maven/cuales-son-los-objetivos-y-fases-de-maven-y-cual-es-su-diferencia/1071905498/>
+- <http://webipedia.es/tecnologia/cursos/maven-construyendo-proyectos/>
+- <https://wiki.uqbar.org/wiki/articles/maven.html>
+- <https://www.it-swarm.dev/es/java/por-que-maven-cuales-son-los-beneficios/969289522/>
