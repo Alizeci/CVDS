@@ -37,10 +37,10 @@ Ingresar a la página de la herramienta y entender:
 
 3. Ciclo de vida de la construcción
 
-	- compile: Genera los ficheros .class compilando los fuentes .java
-	- test: Ejecuta los test automáticos de JUnit existentes, abortando el proceso si alguno de ellos falla.
-	- install: Copia el fichero .jar a un directorio de nuestro ordenador donde maven deja todos los .jar. De esta forma esos .jar pueden utilizarse en otros proyectos maven en el mismo ordenador.
-	- deploy: Copia el fichero .jar a un servidor remoto, poniéndolo disponible para cualquier proyecto maven con acceso a ese servidor remoto.
+	- **compile**: Genera los ficheros .class compilando los fuentes .java
+	- **test**: Ejecuta los test automáticos de JUnit existentes, abortando el proceso si alguno de ellos falla.
+	- **install**: Copia el fichero .jar a un directorio de nuestro ordenador donde maven deja todos los .jar. De esta forma esos .jar pueden utilizarse en otros proyectos maven en el mismo ordenador.
+	- **deploy**: Copia el fichero .jar a un servidor remoto, poniéndolo disponible para cualquier proyecto maven con acceso a ese servidor remoto.
 	
 4. Para qué sirven los plugins
 
