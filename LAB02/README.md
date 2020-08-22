@@ -73,16 +73,31 @@ Un plugin es aquella aplicación que en un programa añade una funcionalidad adi
 
 Si deseamos crear un nuevo proyecto desde nuestra consola usando Maven teniendo en cuenta:
 
--archetype: generate
--Grupo: edu.eci.cvds
--Id del Artefacto: Patterns
--Paquete: edu.eci.cvds.patterns
--archetypeArtifactId: maven-archetype-quickstart
+- archetype: generate
+- Grupo: edu.eci.cvds
+- Id del Artefacto: Patterns
+- Paquete: edu.eci.cvds.patterns
+- archetypeArtifactId: maven-archetype-quickstart
 
 se hace de la siguiente forma:
 
 ```
 mvn archetype:generate -DgroupId=edu.eci.cvds.patterns -DartifactId=Patterns -DarchetypeArtifactId=maven-archetype-quickstart
+```
+
+una vez creado se puede consultar la estructura de archivos y de directorios de nuestro proyecto con:
+
+```
+tree 
+```
+para configurar la version del compilador de Java ejemplo a la versión 8 de nuetro maven
+solo basta con editar el achivo pom.xml y agregar lo siguiente:
+```
+ <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+ </properties>nuetro maven 
+
 ```
 
 ## REFERENCIAS
