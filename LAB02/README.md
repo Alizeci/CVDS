@@ -69,7 +69,7 @@ Un plugin es aquella aplicación que en un programa añade una funcionalidad adi
 ![](http://webipedia.es/wp-content/uploads/2018/08/11_Facilidad-1024x578.jpg)
 <br></br>
 
-**Crear un proyecto con Maven**
+###Crear un proyecto con Maven
 
 Si deseamos crear un nuevo proyecto desde nuestra consola usando Maven teniendo en cuenta:
 
@@ -91,7 +91,7 @@ una vez creado se puede consultar la estructura de archivos y de directorios de 
 tree 
 ```
 para configurar la version del compilador de Java ejemplo a la versión 8 de nuetro maven
-solo basta con editar el achivo pom.xml y agregar lo siguiente:
+solo basta con editar el achivo pom.xml y agregar lo siguiente andes de **dependencias**:
 ```
  <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
