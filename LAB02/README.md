@@ -107,7 +107,7 @@ para compilar usamos el siguiente comando:
 mvn package o si no usa dependencias mvn -U package
 ```
 
-el paramatro *** package  *** construye el proyecto maven y lo empaqueta en un JAR
+el paramatro ***package*** construye el proyecto maven y lo empaqueta en un JAR
 
 existen muchos mas parametros como los siguientes:
 
