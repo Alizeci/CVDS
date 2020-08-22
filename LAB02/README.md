@@ -69,6 +69,22 @@ Un plugin es aquella aplicación que en un programa añade una funcionalidad adi
 ![](http://webipedia.es/wp-content/uploads/2018/08/11_Facilidad-1024x578.jpg)
 <br></br>
 
+**Crear un proyecto con Maven**
+
+Si deseamos crear un nuevo proyecto desde nuestra consola usando Maven teniendo en cuenta:
+
+-archetype: generate
+-Grupo: edu.eci.cvds
+-Id del Artefacto: Patterns
+-Paquete: edu.eci.cvds.patterns
+-archetypeArtifactId: maven-archetype-quickstart
+
+se hace de la siguiente forma:
+
+```
+mvn archetype:generate -DgroupId=edu.eci.cvds.patterns -DartifactId=Patterns -DarchetypeArtifactId=maven-archetype-quickstart
+```
+
 ## REFERENCIAS
 
 - <https://www.it-swarm.dev/es/maven/cuales-son-los-objetivos-y-fases-de-maven-y-cual-es-su-diferencia/1071905498/>
