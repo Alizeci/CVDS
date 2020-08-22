@@ -69,7 +69,7 @@ Un plugin es aquella aplicación que en un programa añade una funcionalidad adi
 ![](http://webipedia.es/wp-content/uploads/2018/08/11_Facilidad-1024x578.jpg)
 <br></br>
 
-###Crear un proyecto con Maven
+### Crear un proyecto con Maven
 
 Si deseamos crear un nuevo proyecto desde nuestra consola usando Maven teniendo en cuenta:
 
@@ -88,7 +88,7 @@ mvn archetype:generate -DgroupId=edu.eci.cvds.patterns -DartifactId=Patterns -Da
 una vez creado se puede consultar la estructura de archivos y de directorios de nuestro proyecto con:
 
 ```
-tree 
+tree o  tree /f
 ```
 para configurar la version del compilador de Java ejemplo a la versión 8 de nuetro maven
 solo basta con editar el achivo pom.xml y agregar lo siguiente andes de **dependencias**:
@@ -96,8 +96,35 @@ solo basta con editar el achivo pom.xml y agregar lo siguiente andes de **depend
  <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
- </properties>nuetro maven 
+ </properties>
+```
 
+### compilar y ejecutar
+
+para compilar usamos el siguiente comando:
+
+```
+mvn package o si no usa dependencias mvn -U package
+```
+
+el paramatro *** package  *** construye el proyecto maven y lo empaqueta en un JAR
+
+existen muchos mas parametros como los siguientes:
+
+- mvn clean =  limpia el proyecto maven eliminando el directorio de destino
+- mvn compiler:compile = compila las clases fuente Java del proyecto maven
+- mvn compiler:testCompile =  compila las clases de prueba del proyecto maven
+- mvn install = Este comando construye el proyecto maven e instala los archivos del proyecto (JAR, WAR, pom.xml, etc.) en el repositorio local
+- mvn validate = Este comando valida el proyecto maven de que todo es correcto y toda la información necesaria está disponible
+- mvn dependency:tree = Este comando genera el árbol de dependencias del proyecto maven
+- mvn dependency:analyze = Este comando analiza el proyecto maven para identificar las dependencias declaradas y no declaradas no utilizadas
+- mvn archetype:generate = Podemos usar este comando para generar un proyecto maven esqueleto de diferentes tipos, como JAR, aplicación web, sitio maven, etc
+- mvn site:site = Este comando genera un sitio web para el proyecto
+
+para ejecutar una clase en este caso App.java usamos el siguiente comando:
+
+```
+mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.App" -Dexec.args="mainClass"
 ```
 
 ## REFERENCIAS
@@ -106,3 +133,4 @@ solo basta con editar el achivo pom.xml y agregar lo siguiente andes de **depend
 - <http://webipedia.es/tecnologia/cursos/maven-construyendo-proyectos/>
 - <https://wiki.uqbar.org/wiki/articles/maven.html>
 - <https://www.it-swarm.dev/es/java/por-que-maven-cuales-son-los-beneficios/969289522/>
+- <https://www.journaldev.com/33645/maven-commands-options-cheat-sheet#1-mvn-clean>
