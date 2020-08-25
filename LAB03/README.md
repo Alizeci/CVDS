@@ -1,4 +1,4 @@
-# CVDS
+# LAB03
 
 **Crear un proyecto con Maven**
 
@@ -10,17 +10,17 @@ mvn archetype:generate -DgroupId=edu.eci.cvds -DartifactId=ClasesEquivalencia -D
 
 ```
 mvn test #Ejecuta todas los test
-mvn -Dtest=NombreTest test
 
+mvn -Dtest=NombreTest test
 ```
 
 **ESPECIFICACIÓN**
 
 **Clase de equivalencia no válida**
 
-- Edad:
-    1. **Inválida**: edad < 0 & edad > 150 & alive:true
-    2. **Menor de edad**: edad < 18 & alive:true
+Edad:
+1. **Inválida**: edad < 0 & edad > 150 & alive:true
+2. **Menor de edad**: edad < 18 & alive:true
 
 3. **Estado**:La persona este muerta -> alive:false
 4. **Duplicado**: Exista dos veces la misma id (cédula) en el registro & alive:true & 18 >= edad < 150
