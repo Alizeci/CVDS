@@ -18,8 +18,7 @@ mvn -Dtest=NombreTest test
 
 **Clase de equivalencia no válida**
 
-Edad:
-1. **Inválida**: edad < 0 & edad > 150 & alive:true
+1. **Edad inválida**: edad < 0 & edad > 150 & alive:true
 2. **Menor de edad**: edad < 18 & alive:true
 
 3. **Estado**:La persona este muerta -> alive:false
