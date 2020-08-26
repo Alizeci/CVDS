@@ -11,9 +11,10 @@ public class RegistryTest {
     public void validateRegistryResult() {
 
         Person person = new Person();
-
+        person.setAlive(true);
+        person.setAge(20);
+        person.setId(102233);
         RegisterResult result = registry.registerVoter(person);
-
         Assert.assertEquals(RegisterResult.VALID, result);
     }
     
@@ -27,9 +28,9 @@ public class RegistryTest {
         Person person = new Person();
         person.setAge(-4);
         person.setAlive(true);
-        
         RegisterResult result = registry.registerVoter(person);
         Assert.assertEquals(RegisterResult.INVALID_AGE, result);
+		
         
         Person person2 = new Person();
         person2.setAge(155);
@@ -89,14 +90,13 @@ public class RegistryTest {
         person.setAlive(true);
         person.setAge(23);
         person.setId(1075689433);
-        
+        RegisterResult result = registry.registerVoter(person);
         Person person2 = new Person();
         person2.setAlive(true);
         person2.setAge(21);
         person2.setId(1075689433);
-        
-        RegisterResult result = registry.registerVoter(person2);
-        Assert.assertEquals(RegisterResult.DUPLICATED, result);
+        RegisterResult result1 = registry.registerVoter(person2);
+        Assert.assertEquals(RegisterResult.DUPLICATED, result1);
         
     }
     
