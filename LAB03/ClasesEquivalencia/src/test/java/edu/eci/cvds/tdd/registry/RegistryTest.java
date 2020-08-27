@@ -91,12 +91,22 @@ public class RegistryTest {
         person.setAge(23);
         person.setId(1075689433);
         RegisterResult result = registry.registerVoter(person);
+        Assert.assertEquals(RegisterResult.VALID, result);
+		
+        Person person1 = new Person();
+        person1.setAlive(true);
+        person1.setAge(28);
+        person1.setId(1075689435);
+        RegisterResult result1 = registry.registerVoter(person1);
+        Assert.assertEquals(RegisterResult.VALID, result1);
+        
         Person person2 = new Person();
         person2.setAlive(true);
         person2.setAge(21);
         person2.setId(1075689433);
-        RegisterResult result1 = registry.registerVoter(person2);
-        Assert.assertEquals(RegisterResult.DUPLICATED, result1);
+        RegisterResult result2 = registry.registerVoter(person2);
+        
+        Assert.assertEquals(RegisterResult.DUPLICATED, result2);
         
     }
     
@@ -124,5 +134,4 @@ public class RegistryTest {
     }
     
 
-    // TODO Complete with more test cases
 }
