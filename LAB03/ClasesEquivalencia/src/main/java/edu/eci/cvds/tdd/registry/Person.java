@@ -154,9 +154,4 @@ public class Person {
     public String toString() {
         return "Person [name=" + name + ", id=" + id + ", age=" + age + ", gender=" + gender + ", alive=" + alive + "]";
     }
-
-	public boolean exist(int id2) {
-		return 	(this.id == id2);
-	}
-
 }
