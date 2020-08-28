@@ -35,6 +35,27 @@ Se está desarrollando para una aerolínea su módulo de liquidación de tiquete
 
 Normativa 005, sobre los descuentos:
 
-	- 15% de descuento sacando el billete con antelación superior a 20 días.
-	- 5% a los pasajeros con edad inferior a 18 años y 8% a los pasajeros con edad superior a 65 años.
+- 15% de descuento sacando el billete con antelación superior a 20 días.
+- 5% a los pasajeros con edad inferior a 18 años y 8% a los pasajeros con edad superior a 65 años.
+
+La siguiente es la especificación de la función que se usará en el módulo del cálculo de los descuentos:
+
+```
+/**
+calcular la tarifa de cada billete según el trayecto, la antelación
+en la que se obtiene el billete y la edad del pasajero, de acuerdo
+con la normativa 005.
+@param tarifaBase valor base del vuelo
+@param diasAntelacion dias de antelación del vuelo
+@param edad - edad del pasajero
+@throws ExcepcionParametrosInvalidos [XXXXXXXXXXXXXXXXXXXXXXXXXXX]
+**/
+public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
+```
+- De acuerdo con lo indicado, y teniendo en cuenta que NO hay precondiciones, en qué casos se debería arrojar una excepción de tipo ExcepcionParametrosInvalidos?. Agregue esto a la especificación.
+	1. El parámetro tarifaBase sea menor igual que cero.
+	2. El parámetro diasAntelacion sea negativo.
+	3. El parámetro edad sea negativo.
+
+- En la siguiente tabla enumere un conjunto de clases de equivalencia que -según usted- creen una buena división del conjunto de datos de entrada de la función anterior:
 
