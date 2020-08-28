@@ -78,28 +78,28 @@ public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 		| CalculoTarifa(-55, 12 ,16)     | ExcepcionParametrosInvalidos
 
 	2. Clase de equivalencia con resultado Incorrecto: 
-		tarifaBase mayor o igual que 0, diasAntelacion menor que 0, edad mayor que 18 y menor igual que 65
+		tarifaBase mayor o igual que 0, diasAntelacion menor que 0, edad mayor que 18 y menor igual que 65.
 
 		| Parámetros de entrada   | Resultado esperado 										
 		| :------: | :------:																
 		| CalculoTarifa(200, -4,44)     | ExcepcionParametrosInvalidos
 
 	3. Clase de equivalencia con resultado Correcto: 
-		tarifaBase mayor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor que 65
+		tarifaBase mayor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor que 65.
 
 		| Parámetros de entrada   | Resultado esperado 										
 		| :------: | :------:																
 		| CalculoTarifa(200, 4,69)    | Tarifa de billete con 8% de descuento, total de tarifa de 184
 
 	4. Clase de equivalencia con resultado Incorrecto: 
-		tarifaBase mayor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad menor que 0 
+		tarifaBase mayor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad menor que 0. 
 
 		| Parámetros de entrada   | Resultado esperado 										
 		| :------: | :------:																
 		| CalculoTarifa(120, 8,-12)    | ExcepcionParametrosInvalidos
 
 	5. Clase de equivalencia con resultado Correcto: 
-		tarifaBase mayor o igual que 0, diasAntelacion mayor que 20, edad mayor que 65
+		tarifaBase mayor o igual que 0, diasAntelacion mayor que 20, edad mayor que 65.
 
 		| Parámetros de entrada   | Resultado esperado 										
 		| :------: | :------:																
@@ -112,3 +112,13 @@ public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 		| :------: | :------:																
 		| CalculoTarifa(120, 11,16)    | Tarifa de billete con 5% de descuento, total de tarifa de 114
 
+
+- A partir de las clases de equivalencia identificadas en el punto 2, identifique las condiciones límite o de frontera de estas.
+
+	1. frontera para tarifaBase es 0.
+	2. frontera para diasAntelacion es 0 y 20.
+	3. frontera para edad es 0, 18 y 65.
+
+- Para cada una de las condiciones de frontera anteriores, defina casos de prueba específicos.
+
+		
