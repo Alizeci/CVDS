@@ -1,3 +1,8 @@
+## Integrantes	
+
+- Laura Alejandra Izquierdo Castro
+- James Alexander Torres Segura
+<br></br>
 ## Clases de equivalencia
 
 **Crear un proyecto con Maven**
@@ -157,9 +162,3 @@ public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 		| 64  | correcto pero sin descuento
 		| 65  | correcto pero sin descuento
 		| 66  | correcto con descuento del 8%
-
-<br></br>
-## Integrantes	
-
-- Laura Alejandra Izquierdo Castro
-- James Alexander Torres Segura
