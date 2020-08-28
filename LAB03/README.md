@@ -1,5 +1,4 @@
 # LAB03
-### a
 
 **Crear un proyecto con Maven**
 
@@ -29,3 +28,7 @@ mvn -Dtest=NombreTest test
 **Clase de equivalencia válida**
 
 5. 18 >= edad < 150 & alive:true & No exista dos veces la misma id (cédula)
+
+##AeroDescuentos
+
+Se está desarrollando para una aerolínea su módulo de liquidación de tiquetes aéreos. Para el mismo, se tiene una función que aplica descuentos a la tarifa base del vuelo dependiendo del tiempo de antelación de la reserva y la edad del pasajero. Los descuentos **SON ACUMULABLES**.
