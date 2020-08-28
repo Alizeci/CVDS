@@ -121,4 +121,35 @@ public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 
 - Para cada una de las condiciones de frontera anteriores, defina casos de prueba específicos.
 
-		
+	1. frontera para tarifaBase es 0.
+
+		| caso de prueba  | Resultado esperado 										
+		| :------: | :------:																
+		| -1   | ExcepcionParametrosInvalidos
+		| 0   | correcto pero sin descuento
+		| 1   | correcto pero sin descuento
+
+	2. frontera para diasAntelacion es 0 y 20.
+
+		| caso de prueba  | Resultado esperado 										
+		| :------: | :------:																
+		| -1   | ExcepcionParametrosInvalidos
+		| 0   | correcto pero sin descuento
+		| 1   | correcto pero sin descuento
+		| 19  | correcto pero sin descuento
+		| 20  | correcto pero sin descuento
+		| 21  | correcto con descuento del 15%
+
+	3. frontera para edad es 0, 18 y 65.
+
+		| caso de prueba  | Resultado esperado 										
+		| :------: | :------:																
+		| -1   | ExcepcionParametrosInvalidos
+		| 0   | correcto con descuento del 5%
+		| 1   | correcto con descuento del 5%
+		| 17  | correcto con descuento del 5%
+		| 18  | correcto con descuento del 5%
+		| 19  | correcto pero sin descuento
+		| 64  | correcto pero sin descuento
+		| 65  | correcto pero sin descuento
+		| 66  | correcto con descuento del 8%
