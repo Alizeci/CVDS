@@ -13,11 +13,11 @@ $ mvn test		#Ejecuta todos los test
 $ mvn -Dtest=NombreTest test		#Ejecuta un test específico
 $ mvn package		#Compila el proyecto y ejecuta los tests
 ```
-
+<br></br>
 
 ## Ejercicio “Registraduría”
 
-**ESPECIFICACIÓN**
+**Especificación**
 
 **Clase de equivalencia no válida**
 
@@ -31,6 +31,7 @@ $ mvn package		#Compila el proyecto y ejecuta los tests
 
 5. 18 >= edad < 150 & alive:true & No exista dos veces la misma id (cédula)
 
+<br></br>
 
 ## AeroDescuentos
 
@@ -158,7 +159,7 @@ public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 		| 66  | correcto con descuento del 8%
 
 <br></br>
-## Clases de equivalencia	
+## Integrantes	
 
 - Laura Alejandra Izquierdo Castro
 - James Alexander Torres Segura
