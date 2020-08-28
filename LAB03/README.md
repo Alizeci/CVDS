@@ -29,6 +29,12 @@ mvn -Dtest=NombreTest test
 
 5. 18 >= edad < 150 & alive:true & No exista dos veces la misma id (cédula)
 
-##AeroDescuentos
+## AeroDescuentos
 
 Se está desarrollando para una aerolínea su módulo de liquidación de tiquetes aéreos. Para el mismo, se tiene una función que aplica descuentos a la tarifa base del vuelo dependiendo del tiempo de antelación de la reserva y la edad del pasajero. Los descuentos **SON ACUMULABLES**.
+
+Normativa 005, sobre los descuentos:
+
+	- 15% de descuento sacando el billete con antelación superior a 20 días.
+	- 5% a los pasajeros con edad inferior a 18 años y 8% a los pasajeros con edad superior a 65 años.
+
