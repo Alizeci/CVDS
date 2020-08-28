@@ -73,7 +73,42 @@ public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 	1. Clase de equivalencia con resultado Incorrecto: 
 		tarifaBase menor que 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor igual que 0 y menor que 18.
 
-| Caso de prueba 
-| Parámetros de entrada   | Resultado esperado 										
-| :------: | :------:																
-| CalculoTarifa(-55, 12 ,16)     | ExcepcionParametrosInvalidos
+		| Parámetros de entrada   | Resultado esperado 										
+		| :------: | :------:																
+		| CalculoTarifa(-55, 12 ,16)     | ExcepcionParametrosInvalidos
+
+	2. Clase de equivalencia con resultado Incorrecto: 
+		tarifaBase mayor o igual que 0, diasAntelacion menor que 0, edad mayor que 18 y menor igual que 65
+
+		| Parámetros de entrada   | Resultado esperado 										
+		| :------: | :------:																
+		| CalculoTarifa(200, -4,44)     | ExcepcionParametrosInvalidos
+
+	3. Clase de equivalencia con resultado Correcto: 
+		tarifaBase mayor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor que 65
+
+		| Parámetros de entrada   | Resultado esperado 										
+		| :------: | :------:																
+		| CalculoTarifa(200, 4,69)    | Tarifa de billete con 8% de descuento, total de tarifa de 184
+
+	4. Clase de equivalencia con resultado Incorrecto: 
+		tarifaBase mayor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad menor que 0 
+
+		| Parámetros de entrada   | Resultado esperado 										
+		| :------: | :------:																
+		| CalculoTarifa(120, 8,-12)    | ExcepcionParametrosInvalidos
+
+	5. Clase de equivalencia con resultado Correcto: 
+		tarifaBase mayor o igual que 0, diasAntelacion mayor que 20, edad mayor que 65
+
+		| Parámetros de entrada   | Resultado esperado 										
+		| :------: | :------:																
+		| CalculoTarifa(120, 44,72)    | Tarifa de billete con 23% de descuento
+
+	6. Clase de equivalencia con resultado Correcto: 
+		tarifaBase mayor a 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor igual que 0 y menor que 18.
+
+		| Parámetros de entrada   | Resultado esperado 										
+		| :------: | :------:																
+		| CalculoTarifa(120, 11,16)    | Tarifa de billete con 5% de descuento, total de tarifa de 114
+
