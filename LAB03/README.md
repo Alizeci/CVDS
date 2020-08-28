@@ -67,3 +67,13 @@ public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 | 4        | tarifaBase mayor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad menor que 0     					| Incorrecto  |
 | 5        | tarifaBase mayor o igual que 0, diasAntelacion mayor que 20, edad mayor que 65    								| Correcto |
 | 6        | tarifaBase mayor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor igual que 0 y menor que 18     		| Correcto |
+
+- Para cada clase de equivalencia, defina un caso de prueba específico, definiendo: parámetros de entrada y resultados esperados.
+
+	1. Clase de equivalencia con resultado Incorrecto: 
+		tarifaBase menor que 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor igual que 0 y menor que 18.
+
+| Caso de prueba 
+| Parámetros de entrada   | Resultado esperado 										
+| :------: | :------:																
+| CalculoTarifa(-55, 12 ,16)     | ExcepcionParametrosInvalidos
