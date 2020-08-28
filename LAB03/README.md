@@ -53,9 +53,17 @@ con la normativa 005.
 public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 ```
 - De acuerdo con lo indicado, y teniendo en cuenta que NO hay precondiciones, en qué casos se debería arrojar una excepción de tipo ExcepcionParametrosInvalidos?. Agregue esto a la especificación.
-	1. El parámetro tarifaBase sea menor igual que cero.
+	1. El parámetro tarifaBase sea gativo.
 	2. El parámetro diasAntelacion sea negativo.
 	3. El parámetro edad sea negativo.
 
 - En la siguiente tabla enumere un conjunto de clases de equivalencia que -según usted- creen una buena división del conjunto de datos de entrada de la función anterior:
 
+| Número   | Clase de equivalencia (en lenguaje natural o matemático). 										| Resultado correcto / incorrecto. |
+| :------: | :------:																| -----: |
+| 1        | tarifaBase menor o igual que 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor igual que 0 y menor que 18.  	| Incorrecto   |
+| 2        | tarifaBase mayor a 0, diasAntelacion menor que 0, edad mayor que 18 y menor igual que 65     					| Incorrecto |
+| 3        | tarifaBase mayor a 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor que 65   					| Correcto |
+| 4        | tarifaBase mayor a 0, diasAntelacion mayor que cero y menor igual que 20, edad menor que 0     					| Incorrecto  |
+| 5        | tarifaBase mayor a 0, diasAntelacion mayor que 20, edad mayor que 65    								| 23,65€ |
+| 6        | tarifaBase mayor a 0, diasAntelacion mayor que cero y menor igual que 20, edad mayor igual que 0 y menor que 18     		| Correcto |
