@@ -14,9 +14,9 @@ mvn archetype:generate -DgroupId=edu.eci.cvds -DartifactId=ClasesEquivalencia -D
 **Actualizar y crear dependencias en el proyecto**
 
 ```
-$ mvn test		#Ejecuta todos los test
+$ mvn test				#Ejecuta todos los test
 $ mvn -Dtest=NombreTest test		#Ejecuta un test específico
-$ mvn package		#Compila el proyecto y ejecuta los tests
+$ mvn package				#Compila el proyecto y ejecuta los tests
 ```
 <br></br>
 
