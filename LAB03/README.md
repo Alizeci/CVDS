@@ -2,7 +2,9 @@
 
 - Laura Alejandra Izquierdo Castro
 - James Alexander Torres Segura
+
 <br></br>
+
 ## Clases de equivalencia
 
 **Crear un proyecto con Maven**
