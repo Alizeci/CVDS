@@ -1,3 +1,8 @@
+## Integrantes	
+
+- Laura Alejandra Izquierdo Castro
+- James Alexander Torres Segura
+<br></br>
 ## Clases de equivalencia
 
 **Crear un proyecto con Maven**
@@ -9,9 +14,9 @@ mvn archetype:generate -DgroupId=edu.eci.cvds -DartifactId=ClasesEquivalencia -D
 **Actualizar y crear dependencias en el proyecto**
 
 ```
-$ mvn test		#Ejecuta todos los test
+$ mvn test				#Ejecuta todos los test
 $ mvn -Dtest=NombreTest test		#Ejecuta un test específico
-$ mvn package		#Compila el proyecto y ejecuta los tests
+$ mvn package				#Compila el proyecto y ejecuta los tests
 ```
 <br></br>
 
@@ -157,9 +162,3 @@ public long calculoTarifa(long tarifaBase, int diasAntelacion, int edad)
 		| 64  | correcto pero sin descuento
 		| 65  | correcto pero sin descuento
 		| 66  | correcto con descuento del 8%
-
-<br></br>
-## Integrantes	
-
-- Laura Alejandra Izquierdo Castro
-- James Alexander Torres Segura
