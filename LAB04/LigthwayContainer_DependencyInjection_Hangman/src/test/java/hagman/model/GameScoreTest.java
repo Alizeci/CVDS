@@ -18,147 +18,114 @@ public class GameScoreTest {
 	
 	/**
 	 * Clase de Equivalencia OriginalScore #1
-	 * válida: El puntaje final y parámetro incorrectCount son mayores o iguales a 0 && menores o iguales a 100.
-	 * Condición de frontera: El 0 que es el puntaje mínimo && 100 que es el puntaje máximo.
+	 * válida: El parámetro incorrectCount es mayor o igual a 0 y menor o igual a 10.
+	 * Condición de frontera: El 0 que es el mínimo numero de letras incorrectas && 10 que es el máximo numero de letras incorrectas.
 	 */
 	@Test
 	public void validateValidOriginalScore() {
 		puntajeFinal = originalScore.calculateScore(0,0);
-		assertEquals(puntajeFinal, 0);
-		
-		puntajeFinal = originalScore.calculateScore(0,100);
 		assertEquals(puntajeFinal, 100);
 		
-		puntajeFinal = originalScore.calculateScore(0,80);
-		assertEquals(puntajeFinal, 20);
+		puntajeFinal = originalScore.calculateScore(0,10);
+		assertEquals(puntajeFinal, 0);
+		
+		puntajeFinal = originalScore.calculateScore(0,5);
+		assertEquals(puntajeFinal, 50);
+		
+		puntajeFinal = originalScore.calculateScore(8,0);
+		assertEquals(puntajeFinal, 100);
+		
 	}
 	
 	/**
 	 * Clase de Equivalencia OriginalScore #2
-	 * negativo: El puntaje final es menor a 0.
-	 * inválido: El parametro incorrectCount es negativo y el parámetro correctCount ≠ 0.
-	 * Condición de frontera: El 0 que es el puntaje mínimo && 100 que es el puntaje máximo.
+	 * inválido: El parametro incorrectCount es menor a 0 o mayor a 10.
+	 * Condición de frontera: El 0 que es el mínimo numero de letras incorrectas && 10 que es el máximo numero de letras incorrectas.
 	 */
 	@Test
-	public void validateInvalidOriginalScore() {
-
-		//parámetros negativos
-		try{
-			puntajeFinal = originalScore.calculateScore(-1,-1);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = originalScore.calculateScore(0,-100);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = originalScore.calculateScore(0,-1);
-		} catch(Exception e) {}
-
-		//parámetro correctCount ≠ 0
-		try{
-			puntajeFinal = originalScore.calculateScore(-1,101);
-		}	catch(Exception e) {}
-		try{
-			puntajeFinal = originalScore.calculateScore(-1,80);
-		}	catch(Exception e) {}		
-		try{
-			puntajeFinal = originalScore.calculateScore(101,0);
-		}	catch(Exception e) {}
+	public void validateInvalidOriginalScore(){
+		puntajeFinal = originalScore.calculateScore(0,-1);
+		assertEquals(puntajeFinal, 100);
 		
+		puntajeFinal = originalScore.calculateScore(0,11);
+		assertEquals(puntajeFinal, 100);
 	}
 	
 	/**
 	 * Clase de Equivalencia BonusScore #1
-	 * válida: El puntaje final y parámetros son mayores o iguales a 0.
+	 * válida: El parametro incorrectCount es mayor o igual a 0 && El parametro correctCount es mayor o igual a 0. 
 	 * Condición de frontera: El 0 que es el puntaje mínimo.
 	 */
 	@Test
 	public void validateValidBonusScore() {
-		puntajeFinal = bonusScore.calculateScore(10,5);
-		assertEquals(puntajeFinal, 5);
-		puntajeFinal = bonusScore.calculateScore(40,15);
-		assertEquals(puntajeFinal, 25);
 		puntajeFinal = bonusScore.calculateScore(0,0);
+		assertEquals(puntajeFinal, 0);
+		puntajeFinal = bonusScore.calculateScore(1,2);
 		assertEquals(puntajeFinal, 0);
 	}
 	
 	/**
 	 * Clase de Equivalencia BonusScore #2
-	 * negativo: El puntaje es menor a 0.
-	 * inválido: Los parámetros son negativos.
+	 * inválido: Los parámetros son menores a 0. El penalización supera la bonificación.
 	 * Condición de frontera: El 0 que es el puntaje mínimo.
 	 */
 	@Test
 	public void validateInvalidBonusScore() {
-		//puntaje negativo
-		try{
-			puntajeFinal = bonusScore.calculateScore(10,15);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = bonusScore.calculateScore(0,5);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = bonusScore.calculateScore(0,-1);
-		} catch(Exception e) {}
-		
-		//parámetros negativos
-		try{
-			puntajeFinal = bonusScore.calculateScore(-10,0);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = bonusScore.calculateScore(-1,1);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = bonusScore.calculateScore(-1,-1);
-		} catch(Exception e) {}
+		puntajeFinal = bonusScore.calculateScore(-1,-1);
+		assertEquals(puntajeFinal, 0);
+		puntajeFinal = bonusScore.calculateScore(0,-1);
+		assertEquals(puntajeFinal, 0);
+		puntajeFinal = bonusScore.calculateScore(0,1);
+		assertEquals(puntajeFinal, 0);
+		puntajeFinal = bonusScore.calculateScore(1,3);
+		assertEquals(puntajeFinal, 0);
+		puntajeFinal = bonusScore.calculateScore(3,7);
+		assertEquals(puntajeFinal, 0);
+
 	}
 	
 	/**
 	 * Clase de Equivalencia PowerScore #1
-	 * válida: El puntaje final y parámetros son mayores o iguales a 0 && menores o iguales a 500.
+	 * válida: El puntaje final es mayor o igual a 0 && menor o igual a 500 && Los parametros son mayores o iguales a 0 &&
+	 * La bonificación es igual o mayor a la penalización.
 	 * Condición de frontera: El 0 que es el puntaje mínimo && 500 que es el puntaje máximo.
 	 */
 	@Test
 	public void validateValidPowerScore() {
-		puntajeFinal = powerScore.calculateScore(5,0);
-		assertEquals(puntajeFinal, 5);
-		puntajeFinal = powerScore.calculateScore(500,500);
-		assertEquals(puntajeFinal, 0);
 		puntajeFinal = powerScore.calculateScore(0,0);
 		assertEquals(puntajeFinal, 0);
+		puntajeFinal = powerScore.calculateScore(3,19);
+		assertEquals(puntajeFinal, 3);
+		puntajeFinal = powerScore.calculateScore(2,3);
+		assertEquals(puntajeFinal, 6);
+		puntajeFinal = powerScore.calculateScore(2,2);
+		assertEquals(puntajeFinal, 14);
+		puntajeFinal = powerScore.calculateScore(4,35);
+		assertEquals(puntajeFinal, 500);
 	}
 	
 	/**
 	 * Clase de Equivalencia PowerScore #2
 	 * puntaje negativo: El puntaje final es menor a 0.
-	 * inválido: Los parámetros son negativos.
+	 * inválido: Los parámetros son negativos. La bonificación es menor a la penalización.
 	 * sobrepasa puntaje: El puntaje final es mayor a 500.
 	 * Condición de frontera: El 0 que es el puntaje mínimo && 500 que es el puntaje máximo.
 	 */
 	@Test
 	public void validateInvalidPowerScore() {
 		//puntaje negativo
-		try{
-			puntajeFinal = powerScore.calculateScore(0,1);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = powerScore.calculateScore(5,8);
-		} catch(Exception e) {}
+		puntajeFinal = powerScore.calculateScore(0,1);
+		assertEquals(puntajeFinal, 0);
 		
-		//parámetros negativos
-		try{
-			puntajeFinal = powerScore.calculateScore(-10,0);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = powerScore.calculateScore(-1,1);
-		} catch(Exception e) {}
-		try{
-			puntajeFinal = powerScore.calculateScore(-1,-1);
-		} catch(Exception e) {}
+		//invalido
+		puntajeFinal = powerScore.calculateScore(1,2);
+		assertEquals(puntajeFinal, 0);
+		puntajeFinal = powerScore.calculateScore(-1,-1);
+		assertEquals(puntajeFinal, 0);
 		
-		//sobrepasa el puntaje
-		try{
-			puntajeFinal = powerScore.calculateScore(501,0);
-		} catch(Exception e) {}
+		//puntaje sobrepasa 500
+		puntajeFinal = powerScore.calculateScore(4,34);
+		assertEquals(puntajeFinal, 500);
 	}
 
 }

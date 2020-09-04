@@ -1,6 +1,8 @@
 package hangman.model;
 
 public class PowerScore implements GameScore{
+	int puntajeFinal = 0;
+	
 	/**
 	 * Realiza la puntuación del juego Hangman. La i-esima letra correcta se bonifica con 5^i-esima.
 	 * Penaliza con 8 puntos por letra incorrecta. Si sobrepasa el máximo puntaje se queda con el máximo.
@@ -12,6 +14,22 @@ public class PowerScore implements GameScore{
  	 */
 	@Override
 	public int calculateScore(int correctCount, int incorrectCount){
-		return 0;
+		int bonificacion = 0;
+		int penalizacion = 0;
+		
+		if(incorrectCount >= 0 && correctCount > 0)  {
+			for (int i = 1; i < correctCount+1; i++) {
+				bonificacion += Math.pow(5, i);
+		    }
+			penalizacion = incorrectCount * 8;
+		
+			if(bonificacion >= penalizacion && (bonificacion - penalizacion) >= 0 && (bonificacion - penalizacion) <= 500){
+				puntajeFinal = bonificacion - penalizacion;
+			}
+			else if(bonificacion >= penalizacion && (bonificacion - penalizacion) > 500){
+				puntajeFinal = 500;
+			}
+		}
+		return puntajeFinal;
 	}
 }
