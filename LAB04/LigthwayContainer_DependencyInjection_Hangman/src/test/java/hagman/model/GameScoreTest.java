@@ -29,8 +29,11 @@ public class GameScoreTest {
 		puntajeFinal = originalScore.calculateScore(0,10);
 		assertEquals(puntajeFinal, 0);
 		
-		puntajeFinal = originalScore.calculateScore(0,5);
-		assertEquals(puntajeFinal, 50);
+		puntajeFinal = originalScore.calculateScore(0,9);
+		assertEquals(puntajeFinal, 10);
+		
+		puntajeFinal = originalScore.calculateScore(0,1);
+		assertEquals(puntajeFinal, 90);
 		
 		puntajeFinal = originalScore.calculateScore(8,0);
 		assertEquals(puntajeFinal, 100);
@@ -53,28 +56,36 @@ public class GameScoreTest {
 	
 	/**
 	 * Clase de Equivalencia BonusScore #1
-	 * válida: El parametro incorrectCount es mayor o igual a 0 && El parametro correctCount es mayor o igual a 0. 
+	 * válida: El parametro incorrectCount es mayor o igual a 0 && El parametro correctCount es mayor o igual a 0 &&
+	 * La bonificación es mayor o igual a la penalización.
 	 * Condición de frontera: El 0 que es el puntaje mínimo.
 	 */
 	@Test
 	public void validateValidBonusScore() {
 		puntajeFinal = bonusScore.calculateScore(0,0);
 		assertEquals(puntajeFinal, 0);
+		puntajeFinal = bonusScore.calculateScore(1,1);
+		assertEquals(puntajeFinal, 5);
+		puntajeFinal = bonusScore.calculateScore(1,0);
+		assertEquals(puntajeFinal, 10);
 		puntajeFinal = bonusScore.calculateScore(1,2);
 		assertEquals(puntajeFinal, 0);
 	}
 	
 	/**
 	 * Clase de Equivalencia BonusScore #2
-	 * inválido: Los parámetros son menores a 0. El penalización supera la bonificación.
+	 * inválido: Los parámetros son menores a 0 || La penalización supera la bonificación.
 	 * Condición de frontera: El 0 que es el puntaje mínimo.
 	 */
 	@Test
 	public void validateInvalidBonusScore() {
+		//negativos
 		puntajeFinal = bonusScore.calculateScore(-1,-1);
 		assertEquals(puntajeFinal, 0);
 		puntajeFinal = bonusScore.calculateScore(0,-1);
 		assertEquals(puntajeFinal, 0);
+		
+		//La penalización supera la bonificación
 		puntajeFinal = bonusScore.calculateScore(0,1);
 		assertEquals(puntajeFinal, 0);
 		puntajeFinal = bonusScore.calculateScore(1,3);
@@ -96,12 +107,11 @@ public class GameScoreTest {
 		assertEquals(puntajeFinal, 0);
 		puntajeFinal = powerScore.calculateScore(3,19);
 		assertEquals(puntajeFinal, 3);
-		puntajeFinal = powerScore.calculateScore(2,3);
-		assertEquals(puntajeFinal, 6);
+		puntajeFinal = powerScore.calculateScore(2,1);
+		assertEquals(puntajeFinal, 22);
 		puntajeFinal = powerScore.calculateScore(2,2);
 		assertEquals(puntajeFinal, 14);
-		puntajeFinal = powerScore.calculateScore(4,35);
-		assertEquals(puntajeFinal, 500);
+		
 	}
 	
 	/**

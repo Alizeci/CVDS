@@ -1,7 +1,6 @@
 package hangman.model;
 
 public class PowerScore implements GameScore{
-	int puntajeFinal = 0;
 	
 	/**
 	 * Realiza la puntuación del juego Hangman. La i-esima letra correcta se bonifica con 5^i-esima.
@@ -14,6 +13,7 @@ public class PowerScore implements GameScore{
  	 */
 	@Override
 	public int calculateScore(int correctCount, int incorrectCount){
+		int puntajeFinal = 0;
 		int bonificacion = 0;
 		int penalizacion = 0;
 		
