@@ -46,7 +46,7 @@ Lo anterior, se traduce en el siguiente modelo, donde se aplica el
 principio de inversión de dependencias:
 
 
-![](img/model.png)
+![](LigthwayContainer_DependencyInjection_Hangman/img/model.png)
 
 
 ### Parte I
