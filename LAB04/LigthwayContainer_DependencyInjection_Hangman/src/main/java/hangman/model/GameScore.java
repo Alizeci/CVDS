@@ -13,4 +13,6 @@ public interface GameScore {
 	default int calculateScore(int correctCount, int incorrectCount) {
 		return 0;
 	}
+	
+	
 }

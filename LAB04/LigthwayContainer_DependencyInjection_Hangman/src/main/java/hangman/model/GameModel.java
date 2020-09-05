@@ -17,6 +17,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+import com.google.inject.Inject;
+
 
 public class GameModel {
     private int incorrectCount;
@@ -24,8 +26,7 @@ public class GameModel {
     private LocalDateTime dateTime;
     private int gameScore;
     private int[] lettersUsed;
-    
-    
+    private GameScore scoreCalculate;
     private HangmanDictionary dictionary;
     
     private Scanner scan;
@@ -33,17 +34,21 @@ public class GameModel {
     private char[] randomWordCharArray;
     
     
-   
-    public GameModel(HangmanDictionary dictionary){
+
+    public GameModel(HangmanDictionary dictionary, GameScore scoreCalculate){
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary=dictionary;
+        this.scoreCalculate=scoreCalculate;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        
+        gameScore = scoreCalculate.calculateScore(correctCount,incorrectCount);
         
     }
+    
+
     
     //method: reset
     //purpose: reset this game model for a new game
@@ -52,7 +57,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScore = scoreCalculate.calculateScore(correctCount,incorrectCount);;
     }
 
     //setDateTime
@@ -74,10 +79,10 @@ public class GameModel {
         }
         if(positions.size() == 0){
             incorrectCount++;
-            gameScore -= 10;
         } else {
             correctCount += positions.size();
         }
+        gameScore = scoreCalculate.calculateScore(correctCount,incorrectCount);
         return positions;
         
     }
@@ -99,6 +104,7 @@ public class GameModel {
     //purpose: returns current score value
     public int getScore() {
         return gameScore;
+        
     }
 
     //name: selectRandomWord()

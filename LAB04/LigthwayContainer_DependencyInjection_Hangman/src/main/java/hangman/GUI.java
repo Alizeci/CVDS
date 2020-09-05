@@ -1,10 +1,14 @@
 package hangman;
 
+import com.google.inject.Guice;
 import com.google.inject.Inject;
+import com.google.inject.Injector;
+
 import hangman.controller.*;
 import hangman.model.*;
 import hangman.model.dictionary.HangmanDictionary;
 import hangman.setup.factoryMethod.HangmanFactoryMethod;
+import hangman.setup.guice.HangmanFactoryServices;
 import hangman.view.*;
 
 import java.awt.*;
@@ -33,6 +37,7 @@ public class GUI {
     private Language language;
     private HangmanDictionary dictionary;
     private HangmanPanel hangmanPanel;
+    private GameScore scoreCalculate;
 
     private MainFrameController mainFrameController;
 
@@ -52,10 +57,12 @@ public class GUI {
 
     @Inject
     // Use Guice constructor
-    public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel){
+    public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel, GameScore scoreCalculate){
         this.language = language;
         this.dictionary= dictionary;
         this.hangmanPanel = hangmanPanel;
+        this.scoreCalculate=scoreCalculate;
+     
     }
 
     //method: setup
@@ -79,8 +86,9 @@ public class GUI {
                 mainFrameController
         );
 
-        GameModel gameModel = new GameModel(dictionary);
-        gameController = new GameController(
+    
+         GameModel gameModel = new GameModel(dictionary, scoreCalculate );
+         gameController = new GameController(
                 new GamePanel(gameModel.getCharacterSet(), hangmanPanel, language),
                 gameModel,
                 mainFrameController, language

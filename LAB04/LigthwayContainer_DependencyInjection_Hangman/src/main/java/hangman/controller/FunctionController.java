@@ -1,5 +1,5 @@
 /***************************************************************
-* file: FunctionController.java
+z* file: FunctionController.java
 * author: Omar Rodriguez
 * class: CS 245 - Programming Graphical User Interfaces
 *
